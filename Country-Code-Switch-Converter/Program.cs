@@ -22,6 +22,7 @@ namespace Country_Code_Switch_Converter
             {
                 var readFields = parser.ReadFields();
 
+                // might have to switch around the index of dialingCode and CountryCode depending on format of read file
                 var dialingCode = readFields[0];
 
                 if (dialingCode.Contains("-")) // skips weird country codes
