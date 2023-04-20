@@ -1,5 +1,7 @@
 # Country-Code-Converter (ish)
 
+# THIS WILL BE UPDATED AND MORE COMPLETE OVER TIME
+
 Works for dialing code and ISO numeric country codes
 
 ## Use case:
