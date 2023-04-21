@@ -1,20 +1,22 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Text;
 using Microsoft.VisualBasic.FileIO;
+using System.Windows.Forms;
+using System.Runtime.CompilerServices;
 
 namespace Country_Code_Switch_Converter
 {
     internal class Program
     {
+        [STAThread]
         static void Main(string[] args)
         {
-            // path to the txt file you want to read FROM
-            var readPath = "";
-            // path to the txt file you want to write TO
-            var writePath = "";
+            var files = ChooseFiles();
 
-            // parser with delimiters so "split" the data according to the specified delimiters
-            var parser = new TextFieldParser(readPath) { Delimiters = new string[] { "\t", "/" } };
+
+            // parser with delimiters to "split" the data according to the specified delimiters
+            var parser = new TextFieldParser(files[0]) { Delimiters = new string[] { "\t", "/" } };
 
             var strBldr = new StringBuilder();
 
@@ -33,9 +35,37 @@ namespace Country_Code_Switch_Converter
                 strBldr.Append($"case \"{countryCode}\": return \"{dialingCode}\";");
             }
 
-            File.WriteAllText(writePath, strBldr.ToString());
+            File.WriteAllText(files[1], strBldr.ToString());
         }
 
+        private static string[] ChooseFiles()
+        {
+            var fileArray = new string[2];
+
+
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+                Filter = "Text files (*.txt)|*.txt"
+            };
+            Console.WriteLine("Please choose a file to read from. PRESS ANY KEY TO CONTINUE");
+            Console.ReadKey();
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                fileArray[0] = openFileDialog.FileName;
+            }
+            Console.WriteLine("Please choose a file to write to. PRESS ANY KEY TO CONTINUE");
+            Console.ReadKey();
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                fileArray[1] = openFileDialog.FileName;
+            }
+            Console.Write($"First choice {fileArray[0]}");
+            Console.Write($"Second choice {fileArray[1]}");
+            Console.ReadKey();
+
+            return fileArray;
+        }
 
     }
 }

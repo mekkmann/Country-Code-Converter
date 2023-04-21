@@ -1,0 +1,8 @@
+C:\Users\POLI\GithubRepos\Country-Code-Converter\Country-Code-Switch-Converter\bin\Debug\Country-Code-Switch-Converter.exe.config
+C:\Users\POLI\GithubRepos\Country-Code-Converter\Country-Code-Switch-Converter\bin\Debug\Country-Code-Switch-Converter.exe
+C:\Users\POLI\GithubRepos\Country-Code-Converter\Country-Code-Switch-Converter\bin\Debug\Country-Code-Switch-Converter.pdb
+C:\Users\POLI\GithubRepos\Country-Code-Converter\Country-Code-Switch-Converter\obj\Debug\Country-Code-Switch-Converter.csproj.AssemblyReference.cache
+C:\Users\POLI\GithubRepos\Country-Code-Converter\Country-Code-Switch-Converter\obj\Debug\Country-Code-Switch-Converter.csproj.SuggestedBindingRedirects.cache
+C:\Users\POLI\GithubRepos\Country-Code-Converter\Country-Code-Switch-Converter\obj\Debug\Country-Code-Switch-Converter.csproj.CoreCompileInputs.cache
+C:\Users\POLI\GithubRepos\Country-Code-Converter\Country-Code-Switch-Converter\obj\Debug\Country-Code-Switch-Converter.exe
+C:\Users\POLI\GithubRepos\Country-Code-Converter\Country-Code-Switch-Converter\obj\Debug\Country-Code-Switch-Converter.pdb
